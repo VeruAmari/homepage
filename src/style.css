@@ -5,7 +5,7 @@
   font-weight: 400;
   --bg-color-1: white;
   --bg-color-2: rgb(218, 116, 104);
-  --about-bg-height: 40%;
+  --about-bg-height: 42%;
   background-color: var(--bg-color-1);
 }
 
@@ -26,10 +26,16 @@ body {
   display: grid;
 }
 .photo.container {
+  padding-top: 0.5rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
   position: relative;
   min-width: 100%;
 }
 .photo-1 {
+  width: 90%;
   position: relative;
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
 }
@@ -38,7 +44,7 @@ body {
   font-size: 4rem;
   align-self: flex-end;
   padding: 0;
-  padding-left: 1rem;
+  padding-left: 2rem;
   padding-bottom: 0.5rem;
   margin: 0;
   color: var(--bg-color-1);
@@ -59,11 +65,11 @@ h6 {
 }
 .about-me.container,
 .projects.outer.container {
-  padding: 1.5rem;
+  padding: 1rem;
 }
 .about-me.container {
   background: linear-gradient(
-    145deg,
+    150deg,
     var(--bg-color-2),
     var(--bg-color-2) var(--about-bg-height),
     rgba(0, 0, 0, 0.2) calc(var(--about-bg-height) + 1px),
@@ -88,6 +94,7 @@ h6 {
   align-items: center;
   align-content: center;
   text-align: center;
+  padding-top: 5rem;
   padding-bottom: 2rem;
   width: 100%;
 }
