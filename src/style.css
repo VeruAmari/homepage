@@ -32,13 +32,13 @@ body {
   padding-top: 0.5rem;
   display: grid;
   align-items: center;
-  justify-content: center;
   justify-items: center;
   position: relative;
   min-width: 100%;
 }
 .photo-1 {
-  width: 90%;
+  background-size: cover;
+  min-width: 90%;
   position: relative;
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
 }
@@ -53,10 +53,9 @@ body {
 .name {
   position: absolute;
   font-size: 4rem;
+  bottom: 0%;
   align-self: flex-end;
-  padding: 0;
-  padding-left: 2rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
   margin: 0;
   color: var(--bg-color-1);
   text-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 50%);
@@ -93,8 +92,11 @@ h6 {
   align-self: center;
   text-align: center;
 }
+.text.container {
+  justify-content: center;
+}
 .text.container > .text {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.7rem;
 }
 .about-me > .text.container {
@@ -203,9 +205,9 @@ svg {
 }
 .contact-info.inner-container {
   padding: 1rem;
-  padding-bottom: 5rem;
   display: grid;
   gap: 2rem;
+  padding: 2rem;
 }
 .contact-info.data > * {
   align-items: center;
@@ -219,10 +221,14 @@ img {
   background-color: var(--bg-color-2);
   color: var(--bg-color-1);
   position: relative;
+  grid-template-columns: repeat(auto-fit, minmax(301px, 1fr));
+  justify-content: center;
+  justify-items: center;
 }
 .photo-2-container {
   position: relative;
   display: grid;
+  align-items: center;
 }
 .photo-2 {
   width: 100%;
