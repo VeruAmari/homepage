@@ -22,14 +22,14 @@ body {
   height: 100%;
 }
 .outer.container:not(.projects) {
-  max-width: 1500px;
+  max-width: 1800px;
 }
 .container,
 .projects {
   display: grid;
 }
 .photo.container {
-  padding-top: 0.5rem;
+  padding-top: 1rem;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -37,8 +37,8 @@ body {
   min-width: 100%;
 }
 .photo-1 {
-  background-size: cover;
-  min-width: 90%;
+  min-height: 423px;
+  min-width: 90vw;
   position: relative;
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
 }
@@ -52,13 +52,13 @@ body {
 }
 .name {
   position: absolute;
-  font-size: 4rem;
+  font-size: 5rem;
   bottom: 0%;
   align-self: flex-end;
   padding: 0.5rem;
   margin: 0;
   color: var(--bg-color-1);
-  text-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 50%);
+  text-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 70%);
 }
 .name,
 .header,
@@ -75,7 +75,7 @@ h6 {
 }
 .about-me.container,
 .projects.outer.container {
-  padding: 1rem;
+  padding: 1.2rem;
 }
 .about-me.container {
   background: linear-gradient(
@@ -96,8 +96,9 @@ h6 {
   justify-content: center;
 }
 .text.container > .text {
-  font-size: 1rem;
-  line-height: 1.7rem;
+  padding-top: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
 }
 .about-me > .text.container {
   gap: 1rem;
@@ -114,14 +115,14 @@ h6 {
 }
 .projects.header > *,
 .about-me.header {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 .projects.inner.container {
   width: 100%;
   align-content: center;
   align-items: end;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 .project.container:not(.title) {
   display: grid;
@@ -140,12 +141,13 @@ h6 {
 p {
   max-width: 80ex;
 }
-i {
-  font-size: 1.5rem;
-}
 .link-icons-links,
 .project.links > * {
   text-decoration: none;
+}
+.link-icons-links > svg {
+  width: 50px;
+  height: 50px;
 }
 .link-icons.first > *,
 .project.links > * {
@@ -204,6 +206,7 @@ svg {
   gap: 0;
 }
 .contact-info.inner-container {
+  align-content: start;
   padding: 1rem;
   display: grid;
   gap: 2rem;
@@ -212,23 +215,33 @@ svg {
 .contact-info.data > * {
   align-items: center;
 }
-
+picture {
+  display: grid;
+}
 img {
   background-color: azure;
   max-width: 100%;
+  border: 0;
 }
 .contact.container {
   background-color: var(--bg-color-2);
   color: var(--bg-color-1);
   position: relative;
-  grid-template-columns: repeat(auto-fit, minmax(301px, 1fr));
+  grid-template-columns: 1fr;
   justify-content: center;
   justify-items: center;
 }
+@media (min-width: 600px) {
+  .contact.container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .photo-2-container {
   position: relative;
   display: grid;
   align-items: center;
+  width: 100%;
 }
 .photo-2 {
   width: 100%;
