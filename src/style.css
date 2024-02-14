@@ -33,14 +33,11 @@ body {
   align-items: center;
   justify-items: center;
   position: relative;
-  /*min-width: 100%;*/
 }
 .blank-space {
   visibility: hidden;
 }
 .photo-1 {
-  /*min-height: 423px;
-  min-width: 90vw;*/
   position: relative;
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
 }
@@ -232,6 +229,7 @@ img {
   border: 0;
 }
 .contact.container {
+  width: 100vw;
   background-color: var(--bg-color-2);
   color: var(--bg-color-1);
   position: relative;
@@ -254,14 +252,14 @@ img {
   justify-self: center;
 }
 
+.photo-1 {
+  filter: brightness(90%);
+}
+
 /* Medium-sized viewport styles*/
 @media (min-width: 650px) {
   :root {
     --about-bg-height: 60%;
-  }
-  .about-me.container {
-    justify-content: center;
-    justify-items: center;
   }
   .about-me-inner.container {
     position: relative;
@@ -272,8 +270,44 @@ img {
     align-content: start;
     justify-content: center;
     justify-items: center;
-    margin-left: 100%;
-    margin-right: 100%;
+  }
+  .about-me-inner.container > .text.container {
+    background-color: white;
+    box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+  }
+  .contact.container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-me.container {
+    justify-items: center;
+    justify-content: center;
+  }
+  .contact-info.inner-container {
+    max-width: 40vw;
+    justify-self: right;
+  }
+
+  .photo-2-container {
+    --photo2margin: 2rem;
+    margin-top: var(--photo2margin);
+    margin-bottom: var(--photo2margin);
+    max-width: 40vw;
+    justify-self: left;
+  }
+}
+@media (min-width: 650px) and (max-width: 1300px) {
+  .about-me.container {
+    justify-content: center;
+    justify-items: center;
+  }
+  .about-me-inner.container {
+    max-width: 80ex;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+  .about-me-inner.container > .text.container {
+    margin-top: 15ex;
   }
   .about-me-inner.container > .photo.container {
     position: absolute;
@@ -281,17 +315,17 @@ img {
     top: 3%;
     width: 35ex;
   }
-  .photo-1 {
-    filter: brightness(90%);
-  }
   .about-me-inner.container > .photo.container > .credit {
     top: -1ex;
   }
   .name {
-    left: 58%;
+    left: 80%;
     top: 5%;
     width: 10ex;
     font-size: 4rem;
+  }
+  .about-me.header {
+    margin-left: 9ex;
   }
   .blank-space {
     visibility: visible;
@@ -301,17 +335,22 @@ img {
     width: 18ex;
     height: 7ex;
   }
-  .about-me.header {
-    margin-left: 9ex;
-  }
+}
+@media (min-width: 1300px) {
   .about-me-inner.container > .text.container {
-    margin-top: 15ex;
-    background-color: white;
-    box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.5);
-    padding: 1rem;
+    padding-left: 7ex;
+    margin-left: -5ex;
   }
-
-  .contact.container {
-    grid-template-columns: 1fr 1fr;
+  .about-me.container {
+    justify-items: center;
+  }
+  .photo-1 {
+    height: 50vh;
+    left: 3%;
+  }
+  .about-me-inner.container {
+    max-width: 1300px;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
   }
 }
